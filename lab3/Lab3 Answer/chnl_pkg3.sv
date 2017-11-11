@@ -296,9 +296,6 @@ package chnl_pkg3;
         // first, get om from out_mb, and im from one of in_mbs
         out_mb.get(om);
         in_mbs[om.id].get(im);
-        $display("%8x",om.data);
-        $display("%8x",om.id);
-        $display("%8x",im.data);
         if(om.data != im.data) begin
           this.error_count++;
           $error("[CMPFAIL] Compared failed! mcdt out data %8x ch_id %0d is not equal with channel in data %8x", om.data, om.id, im.data);
